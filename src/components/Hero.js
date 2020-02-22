@@ -22,9 +22,24 @@ const Hero = () => (
       <HeroSpring />
     </SubTitle>
     <IconContainer>
-      <Icon icon={faGithub} />
-      <Icon icon={faLinkedin} />
-      <Icon icon={faInstagram} />
+      <Icon
+        icon={faGithub}
+        hoverColor={colors.red}
+        target="_blank"
+        url="https://github.com/nickschoey"
+      />
+      <Icon
+        icon={faLinkedin}
+        hoverColor={colors.red}
+        target="_blank"
+        url="https://www.linkedin.com/in/jordi-zambrano/"
+      />
+      <Icon
+        icon={faInstagram}
+        hoverColor={colors.red}
+        target="_blank"
+        url="https://www.instagram.com/jordimzambrano/"
+      />
     </IconContainer>
   </Container>
 );
@@ -32,7 +47,7 @@ const Hero = () => (
 const Container = styled.div`
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1)),
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1)),
     url(${splashImage});
   background-size: cover;
   display: flex;

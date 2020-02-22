@@ -3,27 +3,25 @@ import styled from 'styled-components';
 import ImageSpring from './ImageSpring';
 import Icon from '../Icon';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 
-const data = {
-  title: '21 Meals',
-  fontColor: '#ea9267',
-  backgroundColor: '#221e2f',
-  techStack: 'React + Redux, Ant Design, Koa, mySQL',
-  description: 'Meal planner and recipe handler created as a PWA',
-  github: 'https://github.com/nickschoey/mealee-client',
-  site: ''
-};
-const Project = () => {
+const Project = ({ data }) => {
+  console.log(data);
   return (
-    <Container>
+    <Container backgroundColor={data.backgroundColor} color={data.fontColor}>
       <Title>{data.title}</Title>
       <TechStack>{data.techStack}</TechStack>
-      <Carousel>
-        <ImageSpring />
-      </Carousel>
+      <div>
+        <ImageSpring slides={data.imageUrls} />
+      </div>
       <Description>{data.description}</Description>
       <div>
-        <Icon icon={faGithub} hoverColor={data.fontColor} url={data.github} />
+        {data.github && (
+          <Icon icon={faGithub} hoverColor={data.fontColor} url={data.github} />
+        )}
+        {data.site && (
+          <Icon icon={faGlobe} hoverColor={data.fontColor} url={data.site} />
+        )}
       </div>
     </Container>
   );
@@ -34,20 +32,13 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: ${data.backgroundColor};
-  color: ${data.fontColor};
+  background-color: ${props => props.backgroundColor};
+  color: ${props => props.color};
 `;
 
-const Title = styled.h1``;
+const Title = styled.h2``;
 
-const Carousel = styled.div``;
-
-const Info = styled.div`
-  display: flex;
-  justify-content: space-between;
-`;
-
-const TechStack = styled.h3`
+const TechStack = styled.h6`
   font-weight: normal;
 `;
 

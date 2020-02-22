@@ -1,26 +1,7 @@
-import { render } from 'react-dom';
 import React, { useState, useEffect } from 'react';
 import { useTransition, animated, config } from 'react-spring';
 
-const slides = [
-  {
-    id: 0,
-    url:
-      'https://res.cloudinary.com/nickschoey/image/upload/v1535646708/portfolio/21meals_1.jpg'
-  },
-  {
-    id: 1,
-    url:
-      'https://res.cloudinary.com/nickschoey/image/upload/v1535646708/portfolio/21meals_2.jpg'
-  },
-  {
-    id: 2,
-    url:
-      'https://res.cloudinary.com/nickschoey/image/upload/v1535646709/portfolio/21meals_4.jpg'
-  }
-];
-
-const ImageSpring = () => {
+const ImageSpring = ({ slides }) => {
   const [index, set] = useState(0);
   const transitions = useTransition(slides[index], item => item.id, {
     from: { opacity: 0 },
@@ -29,7 +10,10 @@ const ImageSpring = () => {
     config: config.molasses
   });
   useEffect(() => {
-    const interval = setInterval(() => set(state => (state + 1) % 3), 4000);
+    const interval = setInterval(
+      () => set(state => (state + 1) % slides.length),
+      4000
+    );
     return () => clearInterval(interval);
   }, []);
 
