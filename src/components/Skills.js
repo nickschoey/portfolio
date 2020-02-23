@@ -158,7 +158,7 @@ const Skill = ({ icon, title, text }) => {
         <strong style={{ fontSize: '16px', paddingBottom: '7px' }}>
           {title}
         </strong>
-        <span style={{ fontSize: '11px', color: ' #666666' }}>{text}</span>
+        <span style={{ fontSize: '12px', color: ' #666666' }}>{text}</span>
       </div>
     </div>
   );

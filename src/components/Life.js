@@ -76,7 +76,7 @@ const Life = () => {
 };
 
 const Container = styled.div`
-  padding: 0em 25em;
+  padding: 0em 24em;
   display: flex;
   background-color: black;
   color: #fff;
@@ -97,7 +97,7 @@ const LifeItem = ({ icon, title, content, gradient }) => {
 };
 
 const ItemContainer = styled.div`
-  padding: 3em 1em;
+  padding: 3em 0em;
   background-color: ${({ gradient }) =>
     gradient
       ? 'linear-gradient( 0deg, #000000 0%, #242323 50%, #000000 100%)'

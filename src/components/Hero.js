@@ -58,12 +58,12 @@ const Container = styled.div`
 `;
 
 const Title = styled.div`
-  font-size: 2rem;
+  font-size: 2.5rem;
   padding-bottom: 1.1rem;
 `;
 
 const SubTitle = styled.div`
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   text-align: center;
   width: 30%;
 `;

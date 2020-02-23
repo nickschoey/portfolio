@@ -17,10 +17,20 @@ const Project = ({ data }) => {
       <Description>{data.description}</Description>
       <div>
         {data.github && (
-          <Icon icon={faGithub} hoverColor={data.fontColor} url={data.github} />
+          <Icon
+            icon={faGithub}
+            hoverColor={data.fontColor}
+            url={data.github}
+            color={data.color}
+          />
         )}
         {data.site && (
-          <Icon icon={faGlobe} hoverColor={data.fontColor} url={data.site} />
+          <Icon
+            icon={faGlobe}
+            hoverColor={data.fontColor}
+            url={data.site}
+            color={data.color}
+          />
         )}
       </div>
     </Container>
@@ -36,9 +46,9 @@ const Container = styled.div`
   color: ${props => props.color};
 `;
 
-const Title = styled.h2``;
+const Title = styled.h1``;
 
-const TechStack = styled.h6`
+const TechStack = styled.h4`
   font-weight: normal;
 `;
 

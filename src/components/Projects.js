@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Project from './Projects/Project';
+import { colors } from '../constants';
 
 const Projects = () => {
   return (
@@ -34,6 +35,7 @@ const projects = [
       'Habit tracking app based on the Seinfeld Calendar and the No More Zero Days philosophy.',
     github: 'https://gitlab.com/nickschoey/ahbits-client',
     site: null,
+    color: colors.white,
     imageUrls: [
       {
         id: 0,
@@ -65,6 +67,7 @@ const projects = [
     description: 'Meal planner and recipe handler created as a PWA',
     github: 'https://github.com/nickschoey/mealee-client',
     site: null,
+    color: colors.white,
     imageUrls: [
       {
         id: 0,
@@ -88,6 +91,7 @@ const projects = [
     title: 'Masia Can Cardús',
     fontColor: 'black',
     backgroundColor: '#fafafa',
+    color: 'black',
     techStack: 'React, Firestore, Google Cloud Platform',
     description:
       'Landing Page and reservation handling backoffice for a local business.',
@@ -114,6 +118,7 @@ const projects = [
     title: 'Snell Sports Rentals',
     fontColor: '#3389d2',
     backgroundColor: '#202020',
+    color: colors.white,
     techStack: 'Bootstrap, Flask, Jinja, mySQL',
     description: 'Rental handling web page with two frontends.',
     github: 'https://github.com/nickschoey/learning-CS50Project',
@@ -139,6 +144,7 @@ const projects = [
     title: 'JavaScript Blackjack',
     fontColor: '#5cb85d',
     backgroundColor: '#152304',
+    color: colors.white,
     techStack: 'JQuery, HTML, CSS',
     description: 'Complete Blackjack game with bets and all its rules.',
     github: 'https://github.com/nickschoey/Codeworks-Blackjack',
