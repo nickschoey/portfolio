@@ -26,32 +26,6 @@ export default Projects;
 
 const projects = [
   {
-    title: '21 Meals',
-    fontColor: '#ea9267',
-    backgroundColor: '#221e2f',
-    techStack: 'React + Redux, Ant Design, Koa, mySQL',
-    description: 'Meal planner and recipe handler created as a PWA',
-    github: 'https://github.com/nickschoey/mealee-client',
-    site: null,
-    imageUrls: [
-      {
-        id: 0,
-        url:
-          'https://res.cloudinary.com/nickschoey/image/upload/v1535646708/portfolio/21meals_1.jpg'
-      },
-      {
-        id: 1,
-        url:
-          'https://res.cloudinary.com/nickschoey/image/upload/v1535646708/portfolio/21meals_2.jpg'
-      },
-      {
-        id: 2,
-        url:
-          'https://res.cloudinary.com/nickschoey/image/upload/v1535646709/portfolio/21meals_4.jpg'
-      }
-    ]
-  },
-  {
     title: 'Ahbits',
     fontColor: 'white',
     backgroundColor: '#007cff',
@@ -83,6 +57,33 @@ const projects = [
       }
     ]
   },
+  {
+    title: '21 Meals',
+    fontColor: '#ea9267',
+    backgroundColor: '#221e2f',
+    techStack: 'React + Redux, Ant Design, Koa, mySQL',
+    description: 'Meal planner and recipe handler created as a PWA',
+    github: 'https://github.com/nickschoey/mealee-client',
+    site: null,
+    imageUrls: [
+      {
+        id: 0,
+        url:
+          'https://res.cloudinary.com/nickschoey/image/upload/v1535646708/portfolio/21meals_1.jpg'
+      },
+      {
+        id: 1,
+        url:
+          'https://res.cloudinary.com/nickschoey/image/upload/v1535646708/portfolio/21meals_2.jpg'
+      },
+      {
+        id: 2,
+        url:
+          'https://res.cloudinary.com/nickschoey/image/upload/v1535646709/portfolio/21meals_4.jpg'
+      }
+    ]
+  },
+
   {
     title: 'Masia Can Cardús',
     fontColor: 'black',
