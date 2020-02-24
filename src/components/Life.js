@@ -8,7 +8,7 @@ import {
   faDesktop,
   faLaptopCode
 } from '@fortawesome/free-solid-svg-icons';
-import { colors } from '../constants';
+import { colors, device } from '../constants';
 
 const Life = () => {
   return (
@@ -45,7 +45,7 @@ const Life = () => {
         }
       />
       <LifeItem
-        gradient
+        gradient={true}
         icon={faDesktop}
         title="2018"
         content={
@@ -65,9 +65,8 @@ const Life = () => {
         title="Nowadays"
         content={
           <div>
-            Hired by
+            Creating prototypes at
             <a style={{ color: '#007db8' }}> SAP </a>
-            as a Software developer creating internal tool prototypes.
           </div>
         }
       />
@@ -76,16 +75,20 @@ const Life = () => {
 };
 
 const Container = styled.div`
-  padding: 0em 24em;
   display: flex;
+  flex-direction: column;
   background-color: black;
-  color: #fff;
+  color: ${colors.white};
   font-family: 'Open Sans';
+  @media ${device.tablet} {
+    flex-direction: row;
+    padding: 0 10%;
+  }
 `;
 
-const LifeItem = ({ icon, title, content, gradient }) => {
+const LifeItem = ({ icon, title, content }) => {
   return (
-    <ItemContainer gradient={gradient}>
+    <ItemContainer>
       <FontAwesomeIcon
         icon={icon}
         style={{ color: colors.red, fontSize: '2rem' }}
@@ -97,19 +100,19 @@ const LifeItem = ({ icon, title, content, gradient }) => {
 };
 
 const ItemContainer = styled.div`
-  padding: 3em 0em;
-  background-color: ${({ gradient }) =>
-    gradient
-      ? 'linear-gradient( 0deg, #000000 0%, #242323 50%, #000000 100%)'
-      : 'transparent'};
+  padding: 1em 1em;
   display: flex;
   flex-direction: column;
+  border-bottom: 1px solid ${colors.white};
   flex: 1;
+  @media ${device.tablet} {
+    border-bottom: 0px;
+  }
 `;
 const ItemTitle = styled.div`
   font-weight: 500;
   padding: 15px 0px;
-  font-size: 13px;
+  font-size: 15px;
 `;
 const ItemContent = styled.div`
   font-size: 12px;

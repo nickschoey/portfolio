@@ -1,14 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faMapMarkerAlt,
-  faMap,
-  faEnvelope,
-  faPen
-} from '@fortawesome/free-solid-svg-icons';
-import { colors } from '../constants';
-import { faGitkraken, faGithubAlt } from '@fortawesome/free-brands-svg-icons';
+import { faMapMarkerAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { colors, device } from '../constants';
+import { faGithubAlt } from '@fortawesome/free-brands-svg-icons';
 
 const Contact = () => {
   return (
@@ -59,24 +54,31 @@ const Container = styled.div`
 
 const SectionTitle = styled.h1`
   font-family: 'Fira Code';
-  padding-bottom: 2em;
+  padding-bottom: 1em;
   text-align: center;
 `;
 
 const ContactGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 5em;
+  display: flex;
+  flex-direction: column;
+  @media ${device.tablet} {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 5em;
+    flex-direction: row;
+  }
 `;
 
 const GridItem1 = styled.div`
   grid-area: 1 / 1/ 2 / 2;
 `;
 const GridItem2 = styled.div`
-  padding: 0px 30px;
-  border-right: 1px solid #99999999;
-  border-left: 1px solid #99999999;
+  padding: 0px 40px;
   grid-area: 1 / 2 / 2 / 3;
+  @media ${device.tablet} {
+    border-right: 1px solid #99999999;
+    border-left: 1px solid #99999999;
+  }
 `;
 const GridItem3 = styled.div`
   grid-area: 1 / 3 / 2 / 4;

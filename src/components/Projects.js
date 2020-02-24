@@ -6,7 +6,7 @@ import { colors } from '../constants';
 const Projects = () => {
   return (
     <Container>
-      <SectionTitle>My Personal Projects</SectionTitle>
+      <SectionTitle>My Pet Projects</SectionTitle>
       {projects.map((data, i) => (
         <Project key={i} data={data} />
       ))}

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import splashImage from '../assets/2.jpg';
-import { colors } from '../constants';
+import { colors, device } from '../constants';
 import HeroSpring from './HeroSpring';
 import {
   faGithub,
@@ -45,7 +45,6 @@ const Hero = () => (
 );
 
 const Container = styled.div`
-  /* width: 100vw; */
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1)),
     url(${splashImage});
@@ -63,9 +62,13 @@ const Title = styled.div`
 `;
 
 const SubTitle = styled.div`
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   text-align: center;
-  width: 30%;
+  width: 90%;
+  @media ${device.tablet} {
+    width: 50%;
+    font-size: 1.2rem;
+  }
 `;
 
 const IconContainer = styled.div`

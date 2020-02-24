@@ -6,12 +6,12 @@ import {
   faAngular,
   faNodeJs,
   faHtml5,
-  faSass,
   faJsSquare,
-  faPython
+  faPython,
+  faCss3Alt
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { colors } from '../constants';
+import { colors, device } from '../constants';
 
 const Skills = () => {
   return (
@@ -58,7 +58,7 @@ const Skills = () => {
         <Skill5>
           <Skill
             title="CSS"
-            icon={faSass}
+            icon={faCss3Alt}
             text="Styling and animating in pure CSS3 or pre-processors (LESS, SASS). Designing with frameworks as Bootstrap or Material."
           />
         </Skill5>
@@ -97,40 +97,54 @@ const Skills = () => {
 };
 
 const GridContainer = styled.div`
-  padding: 5em;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 2em;
-  grid-row-gap: 2em;
+  display: flex;
+  flex-direction: column;
+  padding: 1em 15px;
+  @media ${device.tablet} {
+    padding: 2em 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 2em;
+    grid-row-gap: 2em;
+  }
 `;
 
 const Skill1 = styled.div`
+  padding: 10px 0;
   grid-area: 1 / 1 / 2 / 2;
 `;
 const Skill2 = styled.div`
+  padding: 10px 0;
   grid-area: 1 / 2 / 2 / 3;
 `;
 const Skill3 = styled.div`
+  padding: 10px 0;
   grid-area: 1 / 3 / 2 / 4;
 `;
 
 const Skill4 = styled.div`
+  padding: 10px 0;
   grid-area: 2 / 1 / 3 / 2;
 `;
 const Skill5 = styled.div`
+  padding: 10px 0;
   grid-area: 2 / 2 / 3 / 3;
 `;
 const Skill6 = styled.div`
+  padding: 10px 0;
   grid-area: 2 / 3 / 3 / 4;
 `;
 const Skill7 = styled.div`
+  padding: 10px 0;
   grid-area: 3 / 1 / 4 / 2;
 `;
 const Skill8 = styled.div`
+  padding: 10px 0;
   grid-area: 3 / 2 / 4 / 3;
 `;
 const Skill9 = styled.div`
+  padding: 10px 0;
   grid-area: 3 / 3 / 4 / 4;
 `;
 

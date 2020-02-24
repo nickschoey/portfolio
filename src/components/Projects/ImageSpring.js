@@ -23,10 +23,11 @@ const ImageSpring = ({ slides }) => {
       style={{
         ...props,
         backgroundImage: `url(${item.url})`,
-        height: '40vh',
-        width: '40vw',
+        height: '100%',
+        width: '100%',
         backgroundSize: 'cover',
-        backgroundPosition: 'center'
+        backgroundPosition: 'center',
+        backgroundClip: ''
       }}
     />
   ));

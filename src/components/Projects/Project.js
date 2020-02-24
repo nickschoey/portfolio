@@ -4,6 +4,7 @@ import ImageSpring from './ImageSpring';
 import Icon from '../Icon';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { device } from '../../constants';
 
 const Project = ({ data }) => {
   console.log(data);
@@ -11,9 +12,9 @@ const Project = ({ data }) => {
     <Container backgroundColor={data.backgroundColor} color={data.fontColor}>
       <Title>{data.title}</Title>
       <TechStack>{data.techStack}</TechStack>
-      <div>
+      <ImageContainer>
         <ImageSpring slides={data.imageUrls} />
-      </div>
+      </ImageContainer>
       <Description>{data.description}</Description>
       <div>
         {data.github && (
@@ -46,12 +47,28 @@ const Container = styled.div`
   color: ${props => props.color};
 `;
 
-const Title = styled.h1``;
+const ImageContainer = styled.div`
+  width: 90vw;
+  height: 300px;
+  @media ${device.tablet} {
+    width: 60vw;
+    height: 40vw;
+  }
+`;
+
+const Title = styled.h1`
+  font-size: 30px;
+`;
 
 const TechStack = styled.h4`
+  text-align: center;
+  padding: 0 20px;
   font-weight: normal;
 `;
 
-const Description = styled.p``;
+const Description = styled.p`
+  padding: 0 20px;
+  text-align: center;
+`;
 
 export default Project;

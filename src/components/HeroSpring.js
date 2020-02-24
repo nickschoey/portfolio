@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useTransition, animated } from 'react-spring';
 import styled from 'styled-components';
-import { colors } from '../constants';
+import { colors, device } from '../constants';
 import SAP from '../assets/sap.png';
 import abi from '../assets/abi.png';
 
@@ -42,9 +42,13 @@ const Red = styled.span`
 `;
 
 const Logo = styled.img`
-  height: 2rem;
+  height: 1.4rem;
   width: auto;
-  padding-left: 0.3rem;
+  padding-left: 0.2rem;
+  @media ${device.tablet} {
+    padding-left: 0.3rem;
+    height: 2rem;
+  }
 `;
 
 const ItemContainer = styled.div`
@@ -220,7 +224,7 @@ const data = [
   ),
   ({ style }) => (
     <animated.div style={{ ...style }}>
-      <ItemContainer>Catch people attention on screens</ItemContainer>
+      <ItemContainer>Catch people's attention on screens</ItemContainer>
     </animated.div>
   ),
   ({ style }) => (
