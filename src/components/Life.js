@@ -1,14 +1,14 @@
-import React from 'react';
-import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from "react";
+import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faMicrophoneAlt,
   faWineGlass,
   faMountain,
   faDesktop,
-  faLaptopCode
-} from '@fortawesome/free-solid-svg-icons';
-import { colors, device } from '../constants';
+  faLaptopCode,
+} from "@fortawesome/free-solid-svg-icons";
+import { colors, device } from "../constants";
 
 const Life = () => {
   return (
@@ -53,10 +53,13 @@ const Life = () => {
             Relocated to Barcelona.
             <br />
             Graduated at
-            <a style={{ color: '#ff7b10' }}> Codeworks</a>.
+            <a style={{ color: "#ff7b10" }}> Codeworks</a>.
             <br />
-            Freelanced at{' '}
-            <span style={{ color: '#0096d6' }}>Abi Global Health</span>.
+            Freelanced at{" "}
+            <span style={{ color: "#0096d6" }}>Abi Global Health</span>.
+            <br />
+            Developed fullstack apps at
+            <a style={{ color: "#007db8" }}> SAP</a>.
           </div>
         }
       />
@@ -65,8 +68,8 @@ const Life = () => {
         title="Nowadays"
         content={
           <div>
-            Creating prototypes at
-            <a style={{ color: '#007db8' }}> SAP </a>
+            Frontend Engineer at
+            <a style={{ color: "#00AAFF" }}> Bynder</a>.
           </div>
         }
       />
@@ -79,7 +82,7 @@ const Container = styled.div`
   flex-direction: column;
   background-color: black;
   color: ${colors.white};
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   @media ${device.tablet} {
     flex-direction: row;
     padding: 0 10%;
@@ -91,7 +94,7 @@ const LifeItem = ({ icon, title, content }) => {
     <ItemContainer>
       <FontAwesomeIcon
         icon={icon}
-        style={{ color: colors.red, fontSize: '2rem' }}
+        style={{ color: colors.red, fontSize: "2rem" }}
       />
       <ItemTitle>{title}</ItemTitle>
       <ItemContent>{content}</ItemContent>

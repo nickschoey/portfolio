@@ -81,14 +81,21 @@ const data = [
   ({ style }) => (
     <animated.div style={{ ...style }}>
       <ItemContainer>
-        I created a Front End for <Logo src={abi} />
+        I freelanced at <Logo src={abi} />
       </ItemContainer>
     </animated.div>
   ),
   ({ style }) => (
     <animated.div style={{ ...style }}>
       <ItemContainer>
-        I've created other stuff that you can see by scrolling down
+        I love companies with blue logos, apparently.
+      </ItemContainer>
+    </animated.div>
+  ),
+  ({ style }) => (
+    <animated.div style={{ ...style }}>
+      <ItemContainer>
+        I've also created other stuff that you can see by scrolling
       </ItemContainer>
     </animated.div>
   ),
