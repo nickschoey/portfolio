@@ -1,33 +1,34 @@
-import React, { useState, useEffect } from 'react';
-import { useTransition, animated } from 'react-spring';
-import styled from 'styled-components';
-import { colors, device } from '../constants';
-import SAP from '../assets/sap.png';
-import abi from '../assets/abi.png';
+import React, { useState, useEffect } from "react";
+import { useTransition, animated } from "react-spring";
+import styled from "styled-components";
+import { colors, device } from "../constants";
+import SAP from "../assets/sap.png";
+import abi from "../assets/abi.png";
+import bynder from "../assets/bynder.png";
 
 export default () => {
   const [index, set] = useState(0);
-  const transitions = useTransition(index, p => p, {
-    from: { opacity: 0, transform: 'translate3d(0%,100%,0)' },
-    enter: { opacity: 1, transform: 'translate3d(0%,0,0)' },
+  const transitions = useTransition(index, (p) => p, {
+    from: { opacity: 0, transform: "translate3d(0%,100%,0)" },
+    enter: { opacity: 1, transform: "translate3d(0%,0,0)" },
     leave: {
       opacity: 0,
-      transform: 'translate3d(0%,-100%,0)',
-      position: 'absolute',
-      width: '100%'
-    }
+      transform: "translate3d(0%,-100%,0)",
+      position: "absolute",
+      width: "100%",
+    },
   });
 
   useEffect(() => {
     const interval = setInterval(() => {
-      set(state => (state + 1) % data.length);
+      set((state) => (state + 1) % data.length);
     }, 2500);
     return () => {
       clearInterval(interval);
     };
   }, []);
   return (
-    <div style={{ height: '70px', position: 'relative' }}>
+    <div style={{ height: "70px", position: "relative" }}>
       {transitions.map(({ item, props, key }) => {
         const Page = data[item];
         return <Page key={key} style={props} />;
@@ -63,11 +64,17 @@ const data = [
       I'm a Software Engineer based in <Red>Barcelona</Red>.
     </animated.div>
   ),
-
   ({ style }) => (
     <animated.div style={{ ...style }}>
       <ItemContainer>
-        I develop Full Stack Applications at <Logo src={SAP} />
+        I'm Frontend Engineer at <Logo src={bynder} />
+      </ItemContainer>
+    </animated.div>
+  ),
+  ({ style }) => (
+    <animated.div style={{ ...style }}>
+      <ItemContainer>
+        I developed Full Stack Applications at <Logo src={SAP} />
       </ItemContainer>
     </animated.div>
   ),
@@ -259,5 +266,5 @@ const data = [
         So back to the top now! Have a great day! 🙂
       </ItemContainer>
     </animated.div>
-  )
+  ),
 ];
